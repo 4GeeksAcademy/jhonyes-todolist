@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './TodoListComponent.css';
 
 export const TodoListComponent = () => {
-    const [tareas, setTareas] = useState(['Tarea 1', 'Tarea 2']);
+    const [tareas, setTareas] = useState([]);
     const [valorTarea, setValorTarea] = useState('');
 
     const handleKeyDownAgregar = (e) => {
