@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './TodoList.css';
+import './TodoListComponent.css';
 
-export const TodoList = () => {
+export const TodoListComponent = () => {
+    const [tareas, setTareas] = useState(['Tarea 1', 'Tarea 2']);
     const [valorTarea, setValorTarea] = useState('');
-    const [tareas, setTareas] = useState([]);
 
     const handleKeyDownAgregar = (e) => {
         e.preventDefault();
@@ -26,7 +26,6 @@ export const TodoList = () => {
     return (
         <div className="container mt-5">
             <h1>todos</h1>
-
             <div className="todos">
                 <form onSubmit={handleKeyDownAgregar}>
                     <input
@@ -52,7 +51,6 @@ export const TodoList = () => {
                         </li>
                     ))}
                 </ul>
-                <hr />
                 <div className="numero-tareas">
                     <p>{totalTareas}</p>
                 </div>

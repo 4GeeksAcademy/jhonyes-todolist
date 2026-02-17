@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    color: #e8dabd;
+}
+
+.container h1 {
+    font-size: 6rem;
+}
+
+.container .todos {
+    max-width: 700px;
+    height: auto;
+    background: white;
+    margin: 0 auto;
+    border: 1px solid grey;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.container .todos ul {
+    padding: 0;
+    margin: 0;
+}
+
+.container .todos ul li {
+    padding: 10px 20px;
+}
+
+.container .todos ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* .container .todos::after, */
+.container .todos::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow:
+        0 1px 1px grey,
+        0 8px 0 -3px #f6f6f6,
+        0 9px 1px -3px grey,
+        0 16px 0 -6px #f6f6f6,
+        0 17px 2px -6px grey;
+}
+
+input {
+    color: grey;
+    width: 95%;
+    margin: 10px;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #dedede;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+input::placeholder {
+    color: #dedede;
+}
+
+.tarea {
+    list-style: none;
+    color: #b2b2b2;
+    font-size: 1.5rem;
+    border: 1px solid #dedede;
+    padding: 10px 0;
+}
+
+.tarea:last-child {
+    /* border-bottom: none; */
+}
+
+.tarea:hover .btn-eliminar {
+    display: block;
+}
+
+.btn-eliminar {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: red;
+    font-size: 1rem;
+    display: none;
+    opacity: 0.3;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-eliminar:hover {
+    opacity: 1;
+    background: red;
+    color: white;
+}
+
+.numero-tareas {
+    background: #e1e1e1;
+    height: 30px;
+    border: 1px solid #dedede;
+    position: relative;
+}
+
+.numero-tareas p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a2a2a2;
+    text-align: start;
+    font-size: 0.8rem;
+    padding: 20px;
+}
