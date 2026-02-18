@@ -1,4 +1,4 @@
-import { TodoListComponent } from './TodoListComponent';
+import { TodoListComponent } from './TodoListComponent/TodoListComponent';
 
 //create your first component
 const Home = () => {

@@ -15,6 +15,7 @@ body {
 
 .container .todos {
     max-width: 700px;
+    min-width: 400px;
     height: auto;
     background: white;
     margin: 0 auto;
