@@ -1,23 +1,9 @@
-.todos ul {
-    padding: 0;
-    margin: 0;
-}
-
-.todos ul li {
-    padding: 10px 20px;
-    list-style: none;
-}
-
-/* .todos ul li:nth-child(odd) {
-    background: #f9f9f9;
-} */
-
 .tarea {
     list-style: none;
     color: #b2b2b2;
     font-size: 1.5rem;
     border: 1px solid #dedede;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 .tarea:hover .btn-eliminar {

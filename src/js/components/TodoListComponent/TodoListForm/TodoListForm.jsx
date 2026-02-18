@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Swal from 'sweetalert2';
 import './TodoListForm.css';
 
 export const TodoListForm = ({ agregarTarea }) => {
@@ -8,7 +9,15 @@ export const TodoListForm = ({ agregarTarea }) => {
         e.preventDefault();
 
         if (valor.trim().length < 1) {
-            alert('No ha escrito ninguna tarea');
+            Swal.fire({
+                title: 'No hay nada escrito en "Agrega una tarea"',
+                icon: 'error',
+                showConfirmButton: true,
+                confirmButtonColor: 'red',
+                confirmButtonText: 'Cerrar',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+            });
             return;
         }
 
