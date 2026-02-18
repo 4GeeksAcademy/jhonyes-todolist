@@ -4,10 +4,7 @@ export const ListTareas = ({ tareas, handleEliminar }) => {
     return (
         <>
             {tareas.map((tarea, index) => (
-                <div
-                    className="d-flex justify-content-between align-items-center tarea"
-                    key={index}
-                >
+                <div className="tarea" key={index}>
                     <p className="m-0">{tarea}</p>
                     <button
                         onClick={() => handleEliminar(index)}
