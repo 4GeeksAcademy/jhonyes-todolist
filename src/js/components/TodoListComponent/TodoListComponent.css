@@ -77,10 +77,6 @@ input::placeholder {
     padding: 10px 0;
 }
 
-.tarea:last-child {
-    /* border-bottom: none; */
-}
-
 .tarea:hover .btn-eliminar {
     display: block;
 }
