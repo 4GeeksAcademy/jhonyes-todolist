@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2';
-import './TodoListForm.css';
+import './ListForm.css';
 
-export const TodoListForm = ({ agregarTarea }) => {
+export const ListForm = ({ agregarTarea }) => {
     const [valor, setValor] = useState('');
 
     const handleSubmit = (e) => {

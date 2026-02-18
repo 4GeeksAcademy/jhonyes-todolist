@@ -1,6 +1,6 @@
-import './TodoListCount.css';
+import './ListCount.css';
 
-export const TodoListCount = ({ tareas }) => {
+export const ListCount = ({ tareas }) => {
     const totalTareas =
         tareas.length > 0
             ? `${tareas.length} ${tareas.length === 1 ? 'tarea' : 'tareas'} por hacer`

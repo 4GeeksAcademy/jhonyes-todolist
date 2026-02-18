@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './TodoListComponent.css';
-import { TodoListForm } from './TodoListForm/TodoListForm';
-import { TodoListTareas } from './TodoListTareas/TodoListTareas';
-import { TodoListCount } from './TodoListCount/TodoListCount';
+import { ListForm } from './ListForm/ListForm';
+import { ListTareas } from './ListTareas/ListTareas';
+import { ListCount } from './ListCount/ListCount';
 
 export const TodoListComponent = () => {
     const [tareas, setTareas] = useState([]);
@@ -21,12 +21,12 @@ export const TodoListComponent = () => {
         <div className="container mt-5">
             <h1>todos</h1>
             <div className="todos">
-                <TodoListForm agregarTarea={handleAgregarTarea} />
-                <TodoListTareas
+                <ListForm agregarTarea={handleAgregarTarea} />
+                <ListTareas
                     tareas={tareas}
                     handleEliminar={handleClickEliminar}
                 />
-                <TodoListCount tareas={tareas} />
+                <ListCount tareas={tareas} />
             </div>
         </div>
     );

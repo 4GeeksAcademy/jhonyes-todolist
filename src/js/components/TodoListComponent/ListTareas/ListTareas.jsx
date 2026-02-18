@@ -1,6 +1,6 @@
-import './TodoListTareas.css';
+import './ListTareas.css';
 
-export const TodoListTareas = ({ tareas, handleEliminar }) => {
+export const ListTareas = ({ tareas, handleEliminar }) => {
     return (
         <>
             {tareas.map((tarea, index) => (
