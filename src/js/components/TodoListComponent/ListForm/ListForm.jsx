@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import Swal from 'sweetalert2';
 import './ListForm.css';
+import { toast } from 'react-toastify';
 
 export const ListForm = ({ agregarTarea }) => {
     const [valor, setValor] = useState('');
@@ -9,19 +9,27 @@ export const ListForm = ({ agregarTarea }) => {
         e.preventDefault();
 
         if (valor.trim().length < 1) {
-            Swal.fire({
-                title: 'No hay nada escrito en "Agrega una tarea"',
-                icon: 'error',
-                showConfirmButton: true,
-                confirmButtonColor: 'red',
-                confirmButtonText: 'Cerrar',
-                allowOutsideClick: false,
-                allowEscapeKey: false,
+            toast.error('Debe introducir una tarea', {
+                toastId: 'tarea',
+                position: 'top-center',
+                autoClose: 2000,
+                closeOnClick: false,
             });
+
             return;
         }
 
         agregarTarea(valor);
+        toast.success(
+            <span>
+                Tarea <strong>{valor}</strong> creada correctamente
+            </span>,
+            {
+                position: 'top-center',
+                autoClose: 2000,
+                closeOnClick: false,
+            },
+        );
         setValor('');
     };
 

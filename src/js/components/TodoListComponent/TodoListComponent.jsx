@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import './TodoListComponent.css';
 import { ListForm } from './ListForm/ListForm';
 import { ListTareas } from './ListTareas/ListTareas';
 import { ListCount } from './ListCount/ListCount';
+
+import './TodoListComponent.css';
 
 export const TodoListComponent = () => {
     const [tareas, setTareas] = useState([]);
