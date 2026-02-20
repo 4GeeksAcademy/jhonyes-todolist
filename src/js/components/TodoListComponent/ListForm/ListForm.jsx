@@ -8,28 +8,15 @@ export const ListForm = ({ agregarTarea }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (valor.trim().length < 1) {
+        if (valor.trim() === '') {
             toast.error('Debe introducir una tarea', {
                 toastId: 'tarea',
                 position: 'top-center',
                 autoClose: 2000,
                 closeOnClick: false,
             });
+        } else agregarTarea(valor);
 
-            return;
-        }
-
-        agregarTarea(valor);
-        toast.success(
-            <span>
-                Tarea <strong>{valor}</strong> creada correctamente
-            </span>,
-            {
-                position: 'top-center',
-                autoClose: 2000,
-                closeOnClick: false,
-            },
-        );
         setValor('');
     };
 
